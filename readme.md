@@ -1,9 +1,6 @@
-# U-Codec: Ultra Low Frame-rate Neural Speech Codec for Fast High-fidelity Speech Generation
+# U-Codec: Neural Speech Codec under Extreme Temporal Compression for Fast High-fidelity Speech Generation
 
-[![arXiv](https://img.shields.io/badge/arXiv-2505.16718-brightgreen.svg?style=flat-square)](https://www.arxiv.org/abs/2510.16718)
-[![githubio](https://img.shields.io/badge/GitHub.io-Demo_Page-blue?logo=Github&style=flat-square)](https://yangxusheng-yxs.github.io/U-Codec/)
-[![GitHub](https://img.shields.io/badge/Github-Code_Release-pink?logo=Github&style=flat-square)](https://github.com/YangXusheng-yxs/CodecFormer_5Hz)
-[![HuggingFace](https://img.shields.io/badge/HugginigFace-Stable_Release-blue?style=flat-square)](https://huggingface.co/shaunxsyang/U-Codec)
+[![githubio](https://img.shields.io/badge/GitHub.io-Demo_Page-blue?logo=Github&style=flat-square)](https://anonymous666-speech.github.io/CodecFormer_5Hz/)
 
 
 ### News
@@ -18,9 +15,11 @@ This paper is currently under review. We have released the checkpoint of U-Codec
 If you are interested in U-Codec, feel free to contact us!
 ## Overview
 
-We propose **U-Codec**, an **U**ltra low frame-rate neural speech **Codec** that achieves high-fidelity reconstruction and fast generation via an extremely frame-rate at 5Hz (5 frames per second). 
-Extreme compression at 5Hz typically leads to severe intelligibility and spectral detail loss, we overcome this by integrating a Transformer-based inter-frame long-term dependency module and systematically optimizing residual vector quantization (RVQ) depth and codebook size. 
-Moreover, we apply U-Codec into a large language model (LLM)-based auto-regressive TTS model, which leverages global and local hierarchical architecture to effectively capture dependencies across multi-layer tokens. 
+We propose  **U-Codec**, an **U**ltra low frame-rate neural speech **Codec** that achieves high-fidelity reconstruction and fast speech generation at a frame-rate of 5Hz (5 frames per second). 
+Extreme temporal compression typically leads to severe intelligibility and spectral detail loss. We overcome this by introducing a Transformer-based inter-frame long-term dependency module and systematically exploring residual vector quantization (RVQ) depth and codebook size to identify optimal configurations.
+Moreover, we apply U-Codec to a large language model (LLM)-based auto-regressive TTS model, which leverages global and local hierarchical architecture to effectively capture dependencies across multi-layer tokens. 
+Experiments demonstrate that U-Codec improves LLM-based TTS inference speed by 3$\times$ over high-frame-rate codecs while maintaining similarity and naturalness. 
+These results validate the feasibility of using 5Hz discrete tokens for fast and high-fidelity speech synthesis.
 
 The overview of U-Codec as following picture shows.
 ![The overview of UniAudio](fig/fig2.png)
@@ -140,15 +139,13 @@ You can directly use the released U-Codec 5Hz checkpoint for inference. More exa
 If you find this code useful in your research, please cite our work and give us a star
 ```bib
 @inproceedings{U-Codec,
-  title     = {U-Codec: Ultra Low Frame-rate Neural Speech Codec for Fast High-fidelity Speech Generation},
-  author    = {Xusheng Yang, Long Zhou, Wenfu Wang, Kai Hu, Shulin Feng, Chenxing Li, Meng Yu, Dong Yu, Yuexian Zou},
+  title     = {U-Codec: Neural Speech Codec under Extreme Temporal Compression for Fast High-fidelity Speech Generation},
+  author    = {Anonymous},
   booktitle = {arXiv},
-  year      = {2025}
+  year      = {2026}
 }
 ```
 
-### Contact us
-If you have any problem about the our code, please contact Xusheng (yangxs@stu.pku.edu.cn). 
 
 ### License
 You can use the code under MIT license.
